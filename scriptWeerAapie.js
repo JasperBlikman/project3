@@ -32,7 +32,7 @@
         xhr.onreadystatechange = function(){
             if(this.readyState == 4){
                 var string = JSON.parse(this.responseText);
-                console.log(string[0].Key);
+                console.log(string);
                 locatie = string[0].Key;
             }
         }
