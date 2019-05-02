@@ -3,7 +3,7 @@
         weerOpvragenNL('250542');
         datumWeergeven();
     } 
-    var apiKey = 'KqWDMjBwgK4J25Sd7xO0rtPZf5U3OU1n';
+    var apiKey = 'tzsS7To53qb8bi9jUL8Y4ZZNCj7RVXZW';
 
 //Deze functie vraagt het weer aan de weer-api
     function weerOpvragenNL(deLocatie){
@@ -20,6 +20,7 @@
         var urlLinkje = "http://dataservice.accuweather.com/currentconditions/v1/" + deLocatie + "?apikey=" + apiKey;       
         xhr.open ("GET", urlLinkje, true );
         xhr.send(); 
+        
     }
 
 //Locatie input
@@ -30,7 +31,15 @@
         }
         return inputStad;
     }
-
+//--------------------------------------------------------------------
+    function stadInTabelWeergeven(){
+        document.getElementById("headerStad").innerHTML = document.getElementById("locatieInput").value;  
+    }
+//--------------------------------------------------------------------
+    function inputLeegmaken(){
+        document.getElementById("locatieInput").value = null;
+    }    
+//--------------------------------------------------------------------
 //Locatie Key ophalen
     function locatieOphalen(){
         var xhr = new XMLHttpRequest();
@@ -45,6 +54,8 @@
         var urlLinkje = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apiKey + "&q=" + naamStad;
         xhr.open ("GET", urlLinkje, true );
         xhr.send();
+        stadInTabelWeergeven();
+        inputLeegmaken();
     }
     //------------------------------------------------------------------
     function temperatuurValue(){
