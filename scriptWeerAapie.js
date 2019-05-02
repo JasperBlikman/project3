@@ -1,11 +1,13 @@
-//Deze functies/data worden direct geladen
+//--------------------------------------------------------------------
+    
     window.onload = function (){
         weerOpvragenNL('250542');
         datumWeergeven();
     } 
     var apiKey = 'tzsS7To53qb8bi9jUL8Y4ZZNCj7RVXZW';
 
-//Deze functie vraagt het weer aan de weer-api
+//--------------------------------------------------------------------
+    
     function weerOpvragenNL(deLocatie){
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){ 
@@ -23,7 +25,8 @@
         
     }
 
-//Locatie input
+//--------------------------------------------------------------------
+    
     function naamInput(){
         var inputStad = document.getElementById("locatieInput").value;
         if (inputStad == ""){
@@ -31,16 +34,21 @@
         }
         return inputStad;
     }
+
 //--------------------------------------------------------------------
+
     function stadInTabelWeergeven(){
         document.getElementById("headerStad").innerHTML = document.getElementById("locatieInput").value;  
     }
+
 //--------------------------------------------------------------------
+    
     function inputLeegmaken(){
         document.getElementById("locatieInput").value = null;
     }    
+
 //--------------------------------------------------------------------
-//Locatie Key ophalen
+    
     function locatieOphalen(){
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
@@ -57,7 +65,9 @@
         stadInTabelWeergeven();
         inputLeegmaken();
     }
+
     //------------------------------------------------------------------
+    
     function temperatuurValue(){
         var x = document.getElementById("temperatuurNL").innerHTML;
         var temp = parseInt(x);
@@ -69,7 +79,9 @@
             document.getElementById("Plaatje").src="boots long.png";
         };
     }
+
     //------------------------------------------------------------------
+    
     function datumWeergeven(){
         var datumVandaag = new Date();
         var dag = datumVandaag.getDate();
