@@ -1,7 +1,8 @@
 //Deze functies/data worden direct geladen
     window.onload = function (){
         weerOpvragenNL('250542');
-    }
+        datumWeergeven();
+    } 
     var apiKey = 'KqWDMjBwgK4J25Sd7xO0rtPZf5U3OU1n';
 
 //Deze functie vraagt het weer aan de weer-api
@@ -45,6 +46,7 @@
         xhr.open ("GET", urlLinkje, true );
         xhr.send();
     }
+    //------------------------------------------------------------------
     function temperatuurValue(){
         var x = document.getElementById("temperatuurNL").innerHTML;
         var temp = parseInt(x);
@@ -55,4 +57,15 @@
         else{
             document.getElementById("Plaatje").src="boots long.png";
         };
+    }
+    //------------------------------------------------------------------
+    function datumWeergeven(){
+        var datumVandaag = new Date();
+        var dag = datumVandaag.getDate();
+        var dag2 = ((dag < 10) ? "0" : "") + dag;
+        var maand = datumVandaag.getMonth() + 1;
+        var maand2 = ((maand < 10) ? "0" : "") + maand;
+        var jaar = datumVandaag.getYear();
+        var jaar4 = ((jaar < 1900) ? (jaar + 1900) : (jaar));
+        document.getElementById("datumdiv").innerHTML = dag2 + "-" + maand2 + "-" + jaar4;
     }

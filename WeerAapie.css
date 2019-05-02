@@ -16,3 +16,9 @@
 .weerInfo{
 	border-collapse: collapse;
 }
+
+#datumdiv {
+	color: blue;
+	font-weight: bold;
+	font-size: 25px;
+}
