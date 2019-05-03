@@ -2,7 +2,7 @@
     window.onload = function (){
         weerOpvragenNL('250542');
     }
-    var apiKey = 'KqWDMjBwgK4J25Sd7xO0rtPZf5U3OU1n';
+    var apiKey = '4GSkbh0bQb1LCFm7gxuOYolz1MvGr4Us';
 
 //Deze functie vraagt het weer aan de weer-api
     function weerOpvragenNL(deLocatie){
