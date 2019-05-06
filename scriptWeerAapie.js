@@ -66,15 +66,35 @@ function locatieOphalen(){
 }
 
 //------------------------------------------------------------------
-
+var tempText = document.getElementById("weersOmschrijvingNL").innerHTML;
 function temperatuurValue(){
     var x = document.getElementById("temperatuurNL").innerHTML;
     var temp = parseInt(x);
-    console.log(temp);
-    if(temp>=20){
+    console.log( temp );
+    if( temp >= 25){
         document.getElementById("Plaatje").src="boots short.png";
     }
-    else{
+    if(temp < 25){
+        document.getElementById("Plaatje").src="boots short.png";
+
+        switch (tempText){
+            case "Sunny": 
+            case "Mostly sunny":
+            case "Partly Sunny":
+            case "Intermittent Clouds":
+            case "Hazy Sunshine":
+            case "Mostly Cloudy":
+            case "Partly cloudy":
+            case "Mostly clear":
+            case "Clouds and sun":
+                document.getElementById("Plaatje").src="boots short.png";
+                break;
+            
+            //default:
+              //  document.getElementById("Plaatje").src="boots long.png";
+        }
+    }
+    if(temp < 20){
         document.getElementById("Plaatje").src="boots long.png";
     };
 }
