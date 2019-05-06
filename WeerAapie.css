@@ -17,13 +17,12 @@
 	border-collapse: collapse;
 }
 
-<<<<<<< HEAD
 #Plaatje{
 	width: 80%;
-=======
+}
+
 #datumdiv {
 	color: blue;
 	font-weight: bold;
 	font-size: 25px;
->>>>>>> master
 }

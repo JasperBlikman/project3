@@ -2,14 +2,16 @@
     
     window.onload = function (){
         weerOpvragenNL('250542');
-<<<<<<< HEAD
+
     }
     var apiKey = '4GSkbh0bQb1LCFm7gxuOYolz1MvGr4Us';
-=======
         datumWeergeven();
     } 
     var apiKey = 'tzsS7To53qb8bi9jUL8Y4ZZNCj7RVXZW';
->>>>>>> master
+        datumWeergeven();
+    } 
+    var apiKey = 'tzsS7To53qb8bi9jUL8Y4ZZNCj7RVXZW';
+
 
 //--------------------------------------------------------------------
     
