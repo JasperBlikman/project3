@@ -1,6 +1,7 @@
 //--------------------------------------------------------------------
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 window.onload = function (){
     weerOpvragenNL('250542');
     datumWeergeven();
@@ -25,6 +26,20 @@ function weerOpvragenNL(deLocatie){
         datumWeergeven();
     } 
     var apiKey = 'tzsS7To53qb8bi9jUL8Y4ZZNCj7RVXZW';
+=======
+    window.onload = function (){
+        weerOpvragenNL('250542');
+
+    }
+    var apiKey = '4GSkbh0bQb1LCFm7gxuOYolz1MvGr4Us';
+        datumWeergeven();
+    } 
+    var apiKey = 'tzsS7To53qb8bi9jUL8Y4ZZNCj7RVXZW';
+        datumWeergeven();
+    } 
+    var apiKey = 'tzsS7To53qb8bi9jUL8Y4ZZNCj7RVXZW';
+
+>>>>>>> 1809083a237204979366e1ae3d96957e24c71565
 
 //--------------------------------------------------------------------
     
